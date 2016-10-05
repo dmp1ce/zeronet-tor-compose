@@ -1,0 +1,19 @@
+version: '2'
+services:
+  tor:
+    build:
+      dockerfile: Dockerfile.tor
+      context: .
+  zeronet:
+    image: nofish/zeronet
+    ports:
+      - "15441:15441"
+      - "43110:43110"
+    working_dir: /root
+    command: python zeronet.py --ui_ip 0.0.0.0 --tor_proxy tor:9050  --tor_controller tor:9051
+    links:
+      - tor
+    volumes_from:
+      - tor
+
+# vi: set tabstop=2 expandtab syntax=yaml:
