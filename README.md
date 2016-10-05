@@ -36,3 +36,7 @@ Stopping zeronettorcompose_tor_1 ... done
 If you are interested in using Zeronet securely, I recommend trying the [Zeronet Chrome plugin](https://github.com/dmp1ce/zeronet-protocol-crx) to prevent Javascript cross-site scripting attacks. 
 
 If you want to use Zeronet more anonymously, I recommend turning on Tor always mode. To do this, click on the `TOR: AVAILABLE` tab and then `Enable Tor for every connection (slower)`. Then you need to restart Zeronet with `docker-compose restart zeronet`.  Keep in mind this will slow down your initial content downloads and others who do not have Tor will not be able to download from your node.
+
+## Backup
+
+All the Zeronet data is stored in `/root/data` on the Zeronet container. A one line command to copy the `users.json` to your host is `docker cp $(docker-compose ps -q zeronet):/root/data/users.json ./`.
