@@ -4,7 +4,7 @@ Docker Compose configuration with for launching Zeronet with Tor support.
 
 ## Usage
 
-Start Zeronet
+### Start Zeronet
 ```
 $ docker-compose up -d
 Creating zeronettorcompose_tor_1
@@ -13,7 +13,7 @@ Creating zeronettorcompose_zeronet_1
 
 Then go to `http://localhost:43110/` in your browser.
 
-Follow logs
+### Follow logs
 ```
 $ docker-compose logs -f
 Attaching to zeronettorcompose_zeronet_1, zeronettorcompose_tor_1
@@ -24,7 +24,7 @@ zeronet_1  | [17:22:40] - Creating FileServer....
 ^CERROR: Aborting.
 ```
 
-Stop Zeronet
+### Stop Zeronet
 ```
 $ docker-compose stop
 Stopping zeronettorcompose_zeronet_1 ... done
