@@ -1,6 +1,6 @@
 # Zeronet with Tor support
 
-Docker Compose configuration with for launching Zeronet with Tor support.
+Docker Compose configuration for launching Zeronet with Tor support.
 
 ## Usage
 
